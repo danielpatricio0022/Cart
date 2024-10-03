@@ -12,3 +12,4 @@ C:\Users\se66162\RiderProjects\Desafio3\Desafio3\obj\Debug\net8.0\refint\Desafio
 C:\Users\se66162\RiderProjects\Desafio3\Desafio3\obj\Debug\net8.0\Desafio3.pdb
 C:\Users\se66162\RiderProjects\Desafio3\Desafio3\obj\Debug\net8.0\Desafio3.genruntimeconfig.cache
 C:\Users\se66162\RiderProjects\Desafio3\Desafio3\obj\Debug\net8.0\ref\Desafio3.dll
+C:\Users\se66162\RiderProjects\Desafio3\Desafio3\obj\Debug\net8.0\Desafio3.sourcelink.json

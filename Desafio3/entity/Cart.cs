@@ -15,6 +15,11 @@
             _products.Add(product);
         }
         
+        public void AddProduct(Product product) //sobrecarga
+        {
+            _products.Add(product);
+        }
+        
         public void RemoveProduct(Product product)
         {
             _products.Remove(product);

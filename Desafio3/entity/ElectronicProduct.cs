@@ -7,4 +7,10 @@ public class ElectronicProduct : Product
         this.name = "Computer";
         this.value = 2000.00;
     }
+    
+    public ElectronicProduct(string name, double value)
+    {
+        this.name = name;
+        this.value = value;
+    }
 }

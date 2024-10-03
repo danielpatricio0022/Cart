@@ -21,16 +21,28 @@ namespace Desafio3
             {
                 Product product = Factory.CreateProduct(productEnum);
                 customer.cart.AddProduct(productEnum);
-
-               
-                double finalPrice = product.totalValue(productEnum);
-                Console.WriteLine($"final price {product}: R$ {finalPrice:F2}");
             }
 
-            Console.WriteLine("\n Customer: " + customer);
-            Console.WriteLine(" \n Cart: ");
-            Console.WriteLine( customer.cart);
-            Console.WriteLine("Total: R$ " + customer.cart.GetTotalValue().ToString("F2"));
+            Console.WriteLine("\nCart: ");
+            Console.WriteLine(customer.cart);
+
+            
+            // Com sobrecarga optional
+            
+            /*
+             ElectronicProduct electronicProduct = new ElectronicProduct("phone", 1500); 
+            customer.cart.AddProduct(electronicProduct);
+            double phoneFinalPrice = electronicProduct.totalValue(ProductEnum.Electronic);
+            Console.WriteLine($"\nFinal price for {electronicProduct}: R$ {phoneFinalPrice:F2}");*/
+
+            foreach (var productEnum in products)
+            {
+                Product product = Factory.CreateProduct(productEnum);
+                double finalPrice = product.totalValue(productEnum);
+                Console.WriteLine($"Final price for {product}: R$ {finalPrice:F2}");
+            }
+
+            Console.WriteLine("\nTotal: R$ " + customer.cart.GetTotalValue().ToString("F2"));
         }
     }
 }
