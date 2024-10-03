@@ -4,7 +4,7 @@ public class FoodProduct : Product
 {
     public FoodProduct()
     {
-        this.name = "laranja";
+        this.name = "Cereal";
         this.value = 10.00 ;
     }
     
