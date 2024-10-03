@@ -8,4 +8,11 @@ public class ClothingProduct : Product
         this.value = 250.00;
     }
     
+    public ClothingProduct(string name, double value)
+    {
+        this.name = name;
+        this.value = value ;
+    }
+
+    
 }
