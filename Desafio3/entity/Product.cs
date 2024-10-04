@@ -3,7 +3,7 @@
    
     public abstract class Product
     {
-        public string name { get; set; }
+        public string name { get; protected set; }
         public decimal value { get; protected set; }
 
         public decimal totalValue()
