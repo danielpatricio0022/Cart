@@ -4,9 +4,10 @@ namespace Desafio3;
 
 public static class Factory
 
-{
+{/*
     public static Product CreateProduct(ProductEnum productEnum)
     {
+        
         switch (productEnum)
         {
             case ProductEnum.Electronic:
@@ -17,9 +18,7 @@ public static class Factory
                 return new ClothingProduct();
             default:
                 throw new ArgumentException("not found product");
-        }
-
-    }
-
+        }*/
+        
    
 }

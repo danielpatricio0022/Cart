@@ -1,24 +1,24 @@
-﻿namespace Desafio3.entity;
-
-public abstract class Product: ProductI
+﻿namespace Desafio3.entity
 {
-   protected string name { get; set; }
-   public double value { get; protected set; }
    
-   public double totalValue(ProductEnum category)
-   {
-       double baseDiscount = 0.05;  
-       double additionalDiscount = (double)category / 100;  
-            
-       double totalDiscount = baseDiscount + additionalDiscount - (baseDiscount * additionalDiscount);
-       double discounted = value * (1 - totalDiscount);
-
-
-       return discounted;
-   }
-
-    public override string ToString()
+    public abstract class Product
     {
-        return $"{nameof(name)}: {name}, {nameof(value)}: {value}";
+        public string name { get; set; }
+        public decimal value { get; protected set; }
+
+        public decimal totalValue()
+        {
+            decimal baseDiscount = 0.05m; 
+            return value * (1 - baseDiscount); 
+        }
+
+        public abstract decimal toCalculate();
+
+        public override string ToString()
+        {
+            return $"{nameof(name)}: {name}, {nameof(value)}: {value}, Total Value: {toCalculate():F2}";
+        }
     }
+   
+    
 }

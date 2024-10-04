@@ -9,11 +9,11 @@
             _products = new List<Product>();
         }
         
-        public void AddProduct(ProductEnum productEnum)
+       /* public void AddProduct(ProductEnum productEnum)
         {
             Product product = Factory.CreateProduct(productEnum); 
             _products.Add(product);
-        }
+        }*/
         
         public void AddProduct(Product product) //sobrecarga
         {
@@ -25,15 +25,16 @@
             _products.Remove(product);
         }
         
-        public double GetTotalValue()
+        public decimal GetTotalValue()
         {
-            double total = 0;
+           decimal total = 0;
             foreach (var product in _products)
             {
-                total += product.value; 
+                total += product.toCalculate();  
             }
             return total;
         }
+
         
         public override string ToString()
         {

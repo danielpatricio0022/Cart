@@ -2,7 +2,7 @@
 
 public enum ProductEnum
 {
-    Electronic = 5, 
+    /*Electronic = 5, 
     Food = 3,
-    Clothing = 7
+    Clothing = 7*/
 }
