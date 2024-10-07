@@ -32,9 +32,9 @@ namespace Desafio3
             
             Customer customer = new Customer("12233526789", "John", "Doe");
 
-            ElectronicProduct electronicProduct = new ElectronicProduct("phone", 1500.00m);
+            ElectronicProduct electronicProduct = new ElectronicProduct("phone", 1000.00m);
             FoodProduct foodProduct = new FoodProduct("Cereal", 50.00m);
-            ClothingProduct clothingProduct = new ClothingProduct("shirt", 400.00m);
+            ClothingProduct clothingProduct = new ClothingProduct("shirt", 100.00m);
 
             customer.cart.AddProduct(electronicProduct);
             customer.cart.AddProduct(foodProduct);

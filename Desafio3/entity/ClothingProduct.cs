@@ -14,11 +14,12 @@ public class ClothingProduct : Product
         this.value = value;
     }
 
+    
     public override decimal toCalculate()
     {
-        decimal additionalDiscount = 0.07m; 
-        decimal discountedValue = totalValue(); 
-        return discountedValue * (1 - additionalDiscount); 
+        decimal additionalDiscount = 0.07m; // 
+        decimal basePrice = totalValue(); 
+        return basePrice - value * additionalDiscount; 
     }
     
 }

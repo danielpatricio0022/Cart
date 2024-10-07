@@ -16,7 +16,7 @@ public class FoodProduct : Product
     public override decimal toCalculate()
     {
         decimal additionalDiscount = 0.03m; 
-        decimal discountedValue = totalValue(); 
-        return discountedValue * (1 - additionalDiscount); 
+        decimal basePrice = totalValue(); 
+        return basePrice - value * additionalDiscount; 
     }
 }

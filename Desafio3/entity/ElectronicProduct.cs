@@ -17,7 +17,7 @@ public class ElectronicProduct : Product
     public override decimal toCalculate()
     {
         decimal additionalDiscount = 0.05m; 
-        decimal discountedValue = totalValue(); 
-        return discountedValue * (1 - additionalDiscount); 
+        decimal basePrice = totalValue(); 
+        return basePrice - value * additionalDiscount; 
     }
 }
