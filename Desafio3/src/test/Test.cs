@@ -35,6 +35,9 @@ namespace Desafio3
             ElectronicProduct electronicProduct = new ElectronicProduct("phone", 1000.00m);
             FoodProduct foodProduct = new FoodProduct("Cereal", 50.00m);
             ClothingProduct clothingProduct = new ClothingProduct("shirt", 100.00m);
+            Product tool = new ToolProduct("Hammer", 150.00m);
+            Product toy = new ToyProduct("Action Figure", 80.00m);
+            Product drink = new DrinkProduct("Vodka", 200.00m);
 
             customer.cart.AddProduct(electronicProduct);
             customer.cart.AddProduct(foodProduct);
@@ -50,6 +53,9 @@ namespace Desafio3
             Console.WriteLine($"\n price: {electronicProduct.name}: R$ {phoneFinalPrice:F2}");
             Console.WriteLine($" price: {foodProduct.name}: R$ {foodFinalPrice:F2}");
             Console.WriteLine($" price: {clothingProduct.name}: R$ {clothingFinalPrice:F2}");
+            Console.WriteLine(tool.ToString());
+            Console.WriteLine(toy.ToString());
+            Console.WriteLine(drink.ToString());
 
             Console.WriteLine("\nTotal Cart: R$ " + customer.cart.GetTotalValue().ToString("F1"));
         }

@@ -1,18 +1,13 @@
 ﻿namespace Desafio3.entity;
 
-public class ElectronicProduct : Product
+public class ElectronicProduct(string name, decimal value) : Product(name, value)
 {
-    public ElectronicProduct()
+   
+    /*public ElectronicProduct()
     {
         this.name = "Computer";
         this.value = 2000.00m;
-    }
-    
-    public ElectronicProduct(string name, decimal value)
-    {
-        this.name = name;
-        this.value = value;
-    }
+    }*/
 
     public override decimal toCalculate()
     {
