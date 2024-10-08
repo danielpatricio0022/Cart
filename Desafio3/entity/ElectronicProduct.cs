@@ -11,8 +11,10 @@ public class ElectronicProduct(string name, decimal value) : Product(name, value
 
     public override decimal toCalculate()
     {
+        decimal price = base.toCalculate();
         decimal additionalDiscount = 0.05m; 
-        decimal basePrice = totalValue(); 
-        return basePrice - value * additionalDiscount; 
+        decimal finalPrice = price - (value * additionalDiscount);
+
+        return finalPrice;
     }
 }

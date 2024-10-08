@@ -13,13 +13,16 @@
            this.value = value;
         }
         
-        public decimal totalValue()
+        public virtual decimal toCalculate()
         {
             decimal baseDiscount = 0.05m; 
-            return value * (1 - baseDiscount); 
+            return value * (1 - baseDiscount);
         }
 
-        public abstract decimal toCalculate();
+        public decimal totalValue()
+        {
+            return toCalculate();
+        }
 
         public override string ToString()
         {

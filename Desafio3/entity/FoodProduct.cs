@@ -1,6 +1,6 @@
 ﻿namespace Desafio3.entity;
 
-public class FoodProduct (string name, decimal value) : Product(name, value)
+public class FoodProduct(string name, decimal value) : Product(name, value)
 {
   
   /*  public FoodProduct()
@@ -8,11 +8,13 @@ public class FoodProduct (string name, decimal value) : Product(name, value)
         this.name = "Cereal";
         this.value = 10.00m ;
     }*/
-  
-    public override decimal toCalculate()
-    {
-        decimal additionalDiscount = 0.03m; 
-        decimal basePrice = totalValue(); 
-        return basePrice - value * additionalDiscount; 
-    }
+
+  public override decimal toCalculate()
+  {
+      decimal price = base.toCalculate();
+      decimal additionalDiscount = 0.03m; 
+      decimal finalPrice = price - (value * additionalDiscount);
+
+      return finalPrice;
+  }
 }

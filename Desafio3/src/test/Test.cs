@@ -46,7 +46,7 @@ namespace Desafio3
             decimal phoneFinalPrice = electronicProduct.toCalculate();
             decimal foodFinalPrice = foodProduct.toCalculate();
             decimal clothingFinalPrice = clothingProduct.toCalculate();
-
+            
             Console.WriteLine("\nCart: ");
             Console.WriteLine(customer.cart);
 
